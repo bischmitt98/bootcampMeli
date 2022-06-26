@@ -15,8 +15,14 @@ public class Watch {
     }
 
     // methods
-
     public void setHour(int newHour){
+        if(newHour >= 0 && newHour <24){
+            hour = newHour;
+        }
+    }
+
+    // Example of overload (sobrecarga)
+    public void setHour(int newHour, int min){
         if(newHour >= 0 && newHour <24){
             hour = newHour;
         }
