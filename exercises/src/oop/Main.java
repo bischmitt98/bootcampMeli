@@ -6,12 +6,10 @@ package oop;
             Person p2 = new Person("Eduardo", "2", 27);
             Person p3 = new Person("Bianca", "1", 24, 82.2, 1.72  );
 
-            p3.isOfAge(24);
-            p3.BMI(82, 1.72);
             p1.setName("Maria");
             p1.setAge(53);
             System.out.println(p1);
             System.out.println(p2);
-            System.out.println(p3 + ", " + p3.BMI(82, 1.72) + ", " + p3.isOfAge(24));
+            System.out.println(p3 + " BMI: " + p3.BMI(p3) + ", is of Age: " + p3.isOfAge(p3));
         }
     }

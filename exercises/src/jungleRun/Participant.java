@@ -7,7 +7,7 @@ public class Participant {
     double registrationFee;
 
     public Participant(Long id, String name, String lastName, String phoneNum, String emergencyNum,
-                       String bloodType, String category, int age, int idCard, double registrationFee) {
+                       String bloodType, String category, int age, int idCard) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
@@ -17,7 +17,6 @@ public class Participant {
         this.category = category;
         this.age = age;
         this.idCard = idCard;
-        this.registrationFee = registrationFee;
     }
 
     public double calculatePrice(Participant participant){

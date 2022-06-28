@@ -33,8 +33,8 @@ package oop;
                     ", Height= " + height;
         }
 
-    public int BMI(double weight, double height){
-            double bmi = weight/(Math.pow(height,2));
+    public int BMI(Person person){
+            double bmi = person.getWeight()/(Math.pow(person.getHeight(), 2));
             if(bmi < 20){
                 return -1;
             }else if(bmi > 20 && bmi < 25){
@@ -44,20 +44,52 @@ package oop;
             }
     }
 
-    public boolean isOfAge(int age){
-            if(age > 18){
+    public boolean isOfAge(Person person){
+            if(person.getAge() > 18){
                 return true;
             }else{
                 return false;
             }
     }
 
+        public String getName() {
+            return name;
+        }
+
         public void setName(String name) {
             this.name = name;
         }
 
+        public String getId() {
+            return id;
+        }
+
+        public void setId(String id) {
+            this.id = id;
+        }
+
+        public int getAge() {
+            return age;
+        }
+
         public void setAge(int age) {
             this.age = age;
+        }
+
+        public double getWeight() {
+            return weight;
+        }
+
+        public void setWeight(double weight) {
+            this.weight = weight;
+        }
+
+        public double getHeight() {
+            return height;
+        }
+
+        public void setHeight(double height) {
+            this.height = height;
         }
     }
 
