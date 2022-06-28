@@ -1,4 +1,4 @@
-package oop05;
+package oop05.models;
 
 public class Document {
 

@@ -1,4 +1,4 @@
-package oop04;
+package oop04.models;
 
 public class Client {
 }
