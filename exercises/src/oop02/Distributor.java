@@ -1,6 +1,4 @@
-package ineheritance;
-
-import java.util.ArrayList;
+package oop02;
 
 public class Distributor {
     public static void main(String[] args) {

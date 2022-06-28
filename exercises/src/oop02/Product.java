@@ -1,4 +1,4 @@
-package ineheritance;
+package oop02;
 
     public class Product {
         String name;
