@@ -26,7 +26,7 @@ public class Main {
                 .map(pessoa -> pessoa.getNome().toUpperCase())
                 .forEach(System.out::println);
 
-        //Retorna Lista Ordem Alfabética com nome e idade de pessoas do Brazil;
+        //Retorna Lista Ordem Alfabética com nome e idade de pessoas do Brasil;
         pessoas.stream()
                 .filter(pessoa -> pessoa.getPais().equals("Brazil"))
                 .sorted((pessoa1, pessoa2) -> pessoa1.getNome().compareTo(pessoa2.getNome()))

@@ -8,13 +8,7 @@ public abstract class Vehicle {
 }
 
 
-//        1. Crie a classe Veículo que possui os seguintes atributos:
-//        ● Velocidade
-//        ● Aceleração
-//        ● Ângulo de giro
-//        ● Placa
-//        ● Peso
-//        ● Rodas
+
 //        2. Modele a classe Corrida que possui os seguintes atributos:
 //        ● Distância
 //        ● Prêmio em Dólares
