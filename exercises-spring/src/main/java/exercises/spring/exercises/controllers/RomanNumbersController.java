@@ -6,13 +6,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class RomanNumbersController {
-    public int [] indoArabicNumbers = {1, 2, 3, 4, 5, 7, 10, 13, 50, 100, 500, 1000};
-    public String [] romanNumbers = {"I", "II", "III", "IV", "V", "VII", "X", "XIII", "L", "C", "D", "M"};
+    // não funcionou. tentar usar o hashmap
+    public int [] indoArabicNumbers = {1, 2, 3, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000};
+    public String [] romanNumbers = {"I", "II", "III", "IV", "V", "IX", "X", "XL", "L", "XC", "C", "CD", "D", "CM", "M"};
 
     @GetMapping("/number/{num}")
     public String roman(@PathVariable int num){
         StringBuilder roman = new StringBuilder();
-        for (int i= 0; i<indoArabicNumbers.length; i++){
+        for (int i= indoArabicNumbers.length-1; i >= 0; i--){
             while (num >= indoArabicNumbers[i]){
                 num -= indoArabicNumbers[i];
                 roman.append(romanNumbers[i]);
