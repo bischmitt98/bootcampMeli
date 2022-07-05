@@ -1,4 +1,4 @@
-package com.meli.spring02.controller;
+package com.meli.spring02.controllers;
 
 import com.meli.spring02.dto.VehicleDto;
 import com.meli.spring02.models.Vehicle;
@@ -29,7 +29,7 @@ public class VehicleController {
         return ResponseEntity.ok(list);
     }
 
-    @GetMapping("/allByOrder")
+    @GetMapping("/allByPriceOrder")
     public ResponseEntity<List<VehicleDto>> getAllByPriceOrder(){
         List<VehicleDto> list = vehicleService.getAllVehicle();
         return ResponseEntity.ok(list);

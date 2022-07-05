@@ -14,8 +14,8 @@ public class VehicleDto {
     private double price;
 
     public VehicleDto(Vehicle vehicle) {
-        this.licensePlate = getLicensePlate();
-        this.model = getModel();
-        this.price = getPrice();
+        this.licensePlate = vehicle.getLicensePlate();
+        this.model = vehicle.getModel();
+        this.price = vehicle.getPrice();
     }
 }
