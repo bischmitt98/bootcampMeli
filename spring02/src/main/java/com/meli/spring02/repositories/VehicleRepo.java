@@ -14,7 +14,7 @@ import java.util.List;
 
 @Repository
 public class VehicleRepo {
-    private final String LINKFILE = "src/main/resources/data.json";
+    private final String LINKFILE = "src/main/resources/vehicle.json";
 
     public Vehicle getVehicle(String licensePlate){
         ObjectMapper mapper = new ObjectMapper();
