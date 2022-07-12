@@ -10,4 +10,8 @@ public class CreateCalculator {
     public static  Calculator create(){
         return new Calculator(n1, n2);
     }
+
+    public static  Calculator createWithZero(){
+        return new Calculator(n1, 0);
+    }
 }
