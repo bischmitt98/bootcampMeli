@@ -14,7 +14,9 @@ create temporary table movies_tmp
 select * from movies;
 
 -- Modifique a tabela de atores para que pelo menos um ator tenha o filme adicionado item 1 como favorito.
-
+update actors
+set favorite_movie_id = 1, updated_at = now()
+where actors.id = 47;
 
 -- Elimine da tabela temporária do item 5 todos os filmes que ganharam menos de 5 prêmios.
 delete from movies_tmp where awards < 5;
@@ -30,4 +32,4 @@ from actors inner join movies on actors.favorite_movie_id = movies.id
 where movies.awards > 3;
 
 -- Crie um índice no título na tabela de filmes. Verifique se o índice foi criado corretamente.
-create index indx_movies_title on movies(title);
+create index index_movies_title on movies(title);
