@@ -19,37 +19,37 @@ public class VehicleController {
     private VehicleService vehicleService;
 
     @GetMapping("/{licensePlate}")
-    public ResponseEntity<VehicleDto> getVehicle(@PathVariable String licensePlate){
+    public ResponseEntity<VehicleDto> getVehicle(@PathVariable String licensePlate) {
         return ResponseEntity.ok().body(vehicleService.getVehicle(licensePlate));
     }
 
     @GetMapping("/all")
-    public ResponseEntity<List<VehicleDto>> getAllVehicle(){
+    public ResponseEntity<List<VehicleDto>> getAllVehicle() {
         List<VehicleDto> list = vehicleService.getAllVehicle();
         return ResponseEntity.ok(list);
     }
 
     @GetMapping("/allByPriceOrder")
-    public ResponseEntity<List<VehicleDto>> getAllByPriceOrder(){
+    public ResponseEntity<List<VehicleDto>> getAllByPriceOrder() {
         List<VehicleDto> list = vehicleService.getAllVehicle();
         return ResponseEntity.ok(list);
     }
 
     @GetMapping("/allByModel")
-    public ResponseEntity<List<VehicleDto>> getAllByModelOrder(){
+    public ResponseEntity<List<VehicleDto>> getAllByModelOrder() {
         List<VehicleDto> list = vehicleService.getAllVehicle();
         return ResponseEntity.ok(list);
     }
 
     @GetMapping("/byModel/{model}")
-    public ResponseEntity<List<VehicleDto>> getByModel(@PathVariable String model){
+    public ResponseEntity<List<VehicleDto>> getByModel(@PathVariable String model) {
         List<VehicleDto> list = vehicleService.getAllVehicle();
         return ResponseEntity.ok(list);
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.OK)
-    public void saveVehicle(@RequestBody Vehicle newVehicle){
+    public void saveVehicle(@RequestBody Vehicle newVehicle) {
         vehicleService.saveVehicle(newVehicle);
     }
 }

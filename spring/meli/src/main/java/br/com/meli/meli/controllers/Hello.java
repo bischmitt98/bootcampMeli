@@ -11,18 +11,18 @@ import org.springframework.web.bind.annotation.*;
 public class Hello {
 
     @GetMapping("/hi/{name}/{id}")// Get req
-    public String sayHello(@PathVariable String name, @PathVariable int id){
+    public String sayHello(@PathVariable String name, @PathVariable int id) {
         return "Hi " + name + ": " + id + "!";
     }
 
     @GetMapping("/hi/")// Get req
-    public String sayHello2(@RequestParam String name, @RequestParam int id){
+    public String sayHello2(@RequestParam String name, @RequestParam int id) {
         return "Hi " + name + ": " + id + "!";
     }
 
     @PostMapping
-    public ResponseEntity<UserDto> getUser(@RequestBody User user){
-        if(user.getId() == 123){
+    public ResponseEntity<UserDto> getUser(@RequestBody User user) {
+        if (user.getId() == 123) {
             UserDto userDto = new UserDto(user);
             return new ResponseEntity(userDto, HttpStatus.OK);
         }

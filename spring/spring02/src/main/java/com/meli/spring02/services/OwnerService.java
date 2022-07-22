@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class OwnerService implements IOwnerService{
+public class OwnerService implements IOwnerService {
 
     @Override
     public List<Owner> getAllOwners() {

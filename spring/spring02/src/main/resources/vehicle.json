@@ -1,12 +1,12 @@
 [
   {
-    "licensePlate" : "ABC 1234",
-    "model" : "Compass",
+    "licensePlate": "ABC 1234",
+    "model": "Compass",
     "price": 200.00
   },
   {
-    "licensePlate" : "DEF 1234",
-    "model" : "Jetta",
+    "licensePlate": "DEF 1234",
+    "model": "Jetta",
     "price": 150.00
   }
 ]

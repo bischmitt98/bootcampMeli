@@ -18,7 +18,7 @@ public class OwnerController {
     private OwnerService ownerService;
 
     @GetMapping("/all")
-    public ResponseEntity<List<Owner>> getAllVehicle(){
+    public ResponseEntity<List<Owner>> getAllVehicle() {
         List<Owner> list = ownerService.getAllOwners();
         return ResponseEntity.ok(list);
     }

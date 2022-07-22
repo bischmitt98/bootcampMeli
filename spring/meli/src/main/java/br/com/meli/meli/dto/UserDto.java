@@ -5,7 +5,7 @@ import br.com.meli.meli.models.User;
 public class UserDto {
     String name;
 
-    public UserDto(User user){
+    public UserDto(User user) {
         this.name = user.getName();
     }
 

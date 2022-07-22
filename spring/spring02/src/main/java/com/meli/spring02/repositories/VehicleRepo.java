@@ -16,19 +16,19 @@ import java.util.List;
 public class VehicleRepo {
     private final String LINKFILE = "src/main/resources/vehicle.json";
 
-    public Vehicle getVehicle(String licensePlate){
+    public Vehicle getVehicle(String licensePlate) {
         ObjectMapper mapper = new ObjectMapper();
         List<Vehicle> list = null;
 
         try {
             list = Arrays.asList(mapper.readValue(new File(LINKFILE), Vehicle[].class));
 
-        } catch (Exception ex){
+        } catch (Exception ex) {
 
         }
 
-        for (Vehicle v : list){
-            if(v.getLicensePlate().equals(licensePlate)){
+        for (Vehicle v : list) {
+            if (v.getLicensePlate().equals(licensePlate)) {
                 return v;
             }
         }
@@ -36,19 +36,19 @@ public class VehicleRepo {
 //        return null;
     }
 
-    public List<Vehicle> getAllVehicle(){
+    public List<Vehicle> getAllVehicle() {
         ObjectMapper mapper = new ObjectMapper();
         List<Vehicle> list = null;
 
         try {
             list = Arrays.asList(mapper.readValue(new File(LINKFILE), Vehicle[].class));
-        }catch (Exception ex){
+        } catch (Exception ex) {
 
         }
         return list;
     }
 
-    public void saveVehicle(Vehicle newVehicle){
+    public void saveVehicle(Vehicle newVehicle) {
         ObjectMapper mapper = new ObjectMapper();
         ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
         List<Vehicle> currentList = null;
@@ -59,7 +59,7 @@ public class VehicleRepo {
             List<Vehicle> copyList = new ArrayList<>(currentList);
             copyList.add(newVehicle);
             writer.writeValue(new File(LINKFILE), copyList);
-        } catch (Exception ex){
+        } catch (Exception ex) {
             System.out.println("Error" + ex);
         }
     }

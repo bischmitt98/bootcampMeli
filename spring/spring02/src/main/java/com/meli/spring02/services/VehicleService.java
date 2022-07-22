@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class VehicleService implements IVehicleService{
+public class VehicleService implements IVehicleService {
 
     @Autowired
     private VehicleRepo vehicleRepo;
@@ -33,7 +33,7 @@ public class VehicleService implements IVehicleService{
         List<Vehicle> vehicleList = vehicleRepo.getAllVehicle();
         List<VehicleDto> vehicleDtoList = vehicleList.stream()
 //                .map(v->new VehicleDto(v)).collect(Collectors.toList());
-                  .map(VehicleDto::new).collect(Collectors.toList());
+                .map(VehicleDto::new).collect(Collectors.toList());
         return vehicleDtoList;
     }
 
@@ -55,7 +55,7 @@ public class VehicleService implements IVehicleService{
     public List<VehicleDto> getAllByModelOrder() {
         List<Vehicle> vehicleList = vehicleRepo.getAllVehicle();
         return vehicleList.stream()
-                .sorted((v1, v2)-> v1.getModel().compareTo(v2.getModel()))
+                .sorted((v1, v2) -> v1.getModel().compareTo(v2.getModel()))
 //                .sorted(Comparator.comparing(Vehicle::getModel))
                 .map(VehicleDto::new)
                 .collect(Collectors.toList());
@@ -65,7 +65,7 @@ public class VehicleService implements IVehicleService{
     public List<VehicleDto> getByModel(String model) {
         List<Vehicle> vehicleList = vehicleRepo.getAllVehicle();
         return vehicleList.stream()
-                .filter(v-> v.getModel().equals(model))
+                .filter(v -> v.getModel().equals(model))
                 .map(VehicleDto::new)
                 .collect(Collectors.toList());
     }

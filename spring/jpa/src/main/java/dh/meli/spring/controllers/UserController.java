@@ -41,12 +41,12 @@ public class UserController {
     }
 
     @PutMapping
-    public ResponseEntity<User> updateUser(@RequestBody User user){
+    public ResponseEntity<User> updateUser(@RequestBody User user) {
         return ResponseEntity.ok(userService.updateUser(user));
     }
 
     @PatchMapping("/{id}")
-    public ResponseEntity<User> updateUser(@PathVariable long id,  @RequestBody Map<String, String> changes){
+    public ResponseEntity<User> updateUser(@PathVariable long id, @RequestBody Map<String, String> changes) {
         return ResponseEntity.ok(userService.updatePartial(id, changes));
     }
 

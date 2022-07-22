@@ -10,7 +10,7 @@ import java.util.List;
 public class OwnerRepo {
     private final String LINKFILE = "src/main/resources/owner.json";
 
-    public List<Owner> getAllOwners(){
+    public List<Owner> getAllOwners() {
         ObjectMapper mapper = new ObjectMapper();
         List<Owner> list = null;
 
@@ -18,7 +18,7 @@ public class OwnerRepo {
             list = Arrays.asList
                     (mapper.readValue(new File(LINKFILE), Owner[].class));
 
-        }catch (Exception ex){
+        } catch (Exception ex) {
             System.out.println("Error int the file " + LINKFILE);
         }
         return list;

@@ -1,4 +1,4 @@
-package br.com.meli.meli;
+package joalheria.meli;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

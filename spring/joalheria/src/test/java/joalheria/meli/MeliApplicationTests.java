@@ -1,4 +1,4 @@
-package br.com.meli.meli;
+package joalheria.meli;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

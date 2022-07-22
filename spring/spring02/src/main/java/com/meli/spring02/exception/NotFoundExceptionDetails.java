@@ -1,4 +1,5 @@
 package com.meli.spring02.exception;
+
 import lombok.Builder;
 import lombok.Data;
 

@@ -18,10 +18,10 @@ public class Vehicle implements Comparable<Vehicle> {
 
     @Override
     public int compareTo(Vehicle other) {
-        if(this.price > other.getPrice())
+        if (this.price > other.getPrice())
             return 1;
 
-        if(this.price < other.getPrice())
+        if (this.price < other.getPrice())
             return -1;
         return 0;
 

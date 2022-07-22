@@ -13,15 +13,15 @@ import java.time.LocalDateTime;
 public class NotFoundExceptionHandler {
 
     @ExceptionHandler(NotFoundException.class)
-    public ResponseEntity<NotFoundExceptionDetails> handlerNotFoundException(NotFoundException ex){
+    public ResponseEntity<NotFoundExceptionDetails> handlerNotFoundException(NotFoundException ex) {
         return new ResponseEntity<>(
-            NotFoundExceptionDetails.builder()
-                .title("Object not found")
-                .status(HttpStatus.NOT_FOUND.value())
-                .msg(ex.getMessage())
-                .timestamp(LocalDateTime.now())
-                .build(),
-            HttpStatus.NOT_FOUND
+                NotFoundExceptionDetails.builder()
+                        .title("Object not found")
+                        .status(HttpStatus.NOT_FOUND.value())
+                        .msg(ex.getMessage())
+                        .timestamp(LocalDateTime.now())
+                        .build(),
+                HttpStatus.NOT_FOUND
         );
     }
 }
