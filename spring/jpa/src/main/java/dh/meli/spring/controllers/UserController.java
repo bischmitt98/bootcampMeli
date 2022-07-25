@@ -1,7 +1,6 @@
 package dh.meli.spring.controllers;
 
 
-import dh.meli.spring.models.User;
 import dh.meli.spring.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

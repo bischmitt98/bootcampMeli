@@ -1,5 +1,6 @@
 package joalheria.meli.services;
 
+import joalheria.meli.exceptions.BadRequestException;
 import joalheria.meli.exceptions.NotFoundException;
 import joalheria.meli.models.Jewel;
 import joalheria.meli.repositories.IJewelRepo;
@@ -27,16 +28,21 @@ public class JewelService implements IJewelService{
 
     @Override
     public Jewel createJewel(Jewel newJewel) {
-        return null;
+        if(newJewel.getId() > 0){
+            throw new BadRequestException("The jewel cannot have an Id to be created");
+        }
+        return jewelRepo.save(newJewel);
     }
 
     @Override
     public void deleteJewel(long id) {
-
+        Jewel jewel = getJewelById(id);
+        jewelRepo.delete(jewel);
     }
 
     @Override
     public Jewel updateJewel(Jewel jewel) {
-        return null;
+        Jewel foundJewel = getJewelById(jewel.getId());
+        return jewelRepo.save(foundJewel);
     }
 }

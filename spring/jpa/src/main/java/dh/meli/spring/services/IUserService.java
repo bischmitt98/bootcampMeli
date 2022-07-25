@@ -1,7 +1,5 @@
 package dh.meli.spring.services;
 
-import dh.meli.spring.models.User;
-
 import java.util.List;
 import java.util.Map;
 
