@@ -4,7 +4,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Data
@@ -28,5 +28,5 @@ public class TestCase {
     private int number_of_tries;
 
     @Column(nullable = false, length = 8)
-    private Date last_update;
+    private LocalDate last_update;
 }

@@ -5,5 +5,5 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface TestCaseRepo extends CrudRepository<TestCase, Long> {
+public interface ITestCaseRepo extends CrudRepository<TestCase, Long> {
 }
