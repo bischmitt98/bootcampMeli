@@ -17,5 +17,6 @@ public class Address {
 
     @OneToOne
     @JoinColumn(name = "id_author")
+    // chave estrangeira
     private Author author;
 }

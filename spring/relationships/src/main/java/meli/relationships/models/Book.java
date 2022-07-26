@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -21,4 +22,8 @@ public class Book {
     @JoinColumn(name = "id_subject")
     @JsonIgnoreProperties("books")
     private Subject subject;
+
+    @ManyToMany(mappedBy = "books")
+    @JsonIgnoreProperties("books")
+    private List<Author> authors;
 }
