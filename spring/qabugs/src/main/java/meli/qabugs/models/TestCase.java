@@ -13,7 +13,7 @@ public class TestCase {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id_case;
+    private long id;
 
     @Column(nullable = false, length = 150)
     private String description;
