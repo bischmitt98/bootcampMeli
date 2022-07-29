@@ -24,44 +24,45 @@ public class TestCaseService implements ITestCaseService{
     }
 
     @Override
-    public TestCase add(TestCase testCase) {
-        if (testCase.getId() > 0)
+    public TestCase add(TestCase newTestCase) {
+        if (newTestCase.getId() > 0)
             throw new BadRequestException("The test cannot have id to be created!");
-        return testCaseRepo.save(testCase);
+        return testCaseRepo.save(newTestCase);
     }
 
     @Override
-    public TestCase update(TestCase testCase) {
-        return null;
+    public TestCase update(TestCase updateTestCase){
+        TestCase foundTest = findById(updateTestCase.getId());
+        return testCaseRepo.save(updateTestCase);
     }
 
     @Override
     public List<TestCase> findAllPassed() {
-        return null;
+        return testCaseRepo.findAllPassedRepo();
     }
 
     @Override
     public List<TestCase> findAllTested() {
-        return null;
+        return testCaseRepo.findAllTestedRepo();
     }
 
     @Override
     public List<TestCase> findAllByDescription(String description) {
-        return null;
+        return testCaseRepo.findAllByDescriptionRepo(description);
     }
 
     @Override
-    public List<TestCase> findByAfterDate(LocalDate localDate) {
-        return null;
+    public List<TestCase> findTestCaseByAfterLastUpdate(LocalDate localDate) {
+        return testCaseRepo.findTestCaseByAfterLastUpdateRepo(localDate);
     }
 
     @Override
-    public void delete(long id_case) {
-
+    public void delete(long id) {
+        testCaseRepo.deleteById(id);
     }
 
     @Override
     public void deleteAll() {
-
+        testCaseRepo.deleteAll();
     }
 }
