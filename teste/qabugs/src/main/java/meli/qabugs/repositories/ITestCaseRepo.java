@@ -10,6 +10,9 @@ import java.util.List;
 
 @Repository
 public interface ITestCaseRepo extends CrudRepository<TestCase, Long> {
+/*    List<TestCase> findAllPassedRepo();
+    List<TestCase> findAllTestedRepo();
+    List<TestCase> findAllByDescriptionRepo(String description);
     @Query(value = "SELECT * FROM test_case WHERE DATE(last_update) = ?1", nativeQuery = true)
-    List<TestCase> findTestCaseByAfterLastUpdate(LocalDate localDate);
+    List<TestCase> findTestCaseByAfterLastUpdateRepo(LocalDate localDate);*/
 }

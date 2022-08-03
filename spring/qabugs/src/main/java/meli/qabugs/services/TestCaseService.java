@@ -37,23 +37,23 @@ public class TestCaseService implements ITestCaseService{
     }
 
     @Override
-    public List<TestCase> findAllPassed() {
-        return testCaseRepo.findAllPassedRepo();
+    public List<TestCase> findAllPassed(TestCase testCase) {
+        return testCaseRepo.findAllByPassed(testCase);
     }
 
     @Override
     public List<TestCase> findAllTested() {
-        return testCaseRepo.findAllTestedRepo();
+        return testCaseRepo.findAllByTested();
     }
 
     @Override
     public List<TestCase> findAllByDescription(String description) {
-        return testCaseRepo.findAllByDescriptionRepo(description);
+        return testCaseRepo.findAllByDescription(description);
     }
 
     @Override
     public List<TestCase> findTestCaseByAfterLastUpdate(LocalDate localDate) {
-        return testCaseRepo.findTestCaseByAfterLastUpdateRepo(localDate);
+        return testCaseRepo.findTestCaseByAfterLastUpdate(localDate);
     }
 
     @Override

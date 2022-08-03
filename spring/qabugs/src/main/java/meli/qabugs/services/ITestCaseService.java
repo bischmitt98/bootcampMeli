@@ -11,7 +11,7 @@ public interface ITestCaseService {
     TestCase findById(long id);
     TestCase add(TestCase newTestCase);
     TestCase update(TestCase updateTestCase);
-    List<TestCase> findAllPassed();
+    List<TestCase> findAllPassed(TestCase testCase);
     List<TestCase> findAllTested();
     List<TestCase> findAllByDescription(String description);
     List<TestCase> findTestCaseByAfterLastUpdate(LocalDate localDate);
